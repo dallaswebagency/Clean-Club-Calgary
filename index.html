@@ -123,7 +123,11 @@ nav .dd a:hover{background:var(--teal-l)}
 .lane h3{font-size:clamp(40px,4.4vw,64px);font-weight:800;margin:14px 0 18px}
 .lane p.d{max-width:470px;opacity:.85}
 .lane .img{margin:36px 0;height:260px;border-radius:20px;background-size:cover;background-position:center}
-.lane.res .img{background-image:url(images/residential-living-room.jpg),url(images/home-toddler-cat.jpg)}
+.lane.res .pair{margin:36px 0;display:grid;grid-template-columns:1.5fr 1fr;gap:12px;height:260px}
+.lane.res .pair div{background-size:cover;background-position:center;border-radius:20px}
+.lane.res .pair div:first-child{background-image:url(images/residential-living-room.jpg);border-radius:20px 4px 4px 20px}
+.lane.res .pair div:last-child{background-image:url(images/residential-kitchen.jpg);background-position:62% center;border-radius:4px 20px 20px 4px}
+@media (max-width:640px){.lane.res .pair{height:200px;grid-template-columns:1.3fr 1fr}}
 .lane.com .img{clip-path:polygon(0 0,100% 0,100% 82%,88% 100%,0 100%);border-radius:20px 20px 0 20px;background-image:url(images/commercial-office.jpg)}
 .svc{list-style:none;border-top:1px solid var(--line)}
 .lane.com .svc{border-color:rgba(255,255,255,.16)}
@@ -364,7 +368,7 @@ footer a:hover{color:var(--teal)}
       <span class="num">01 / Residential</span>
       <h3>For your home</h3>
       <p class="d">Reliable home cleaning in Calgary and surrounding areas, tailored to your schedule, your priorities and your budget.</p>
-      <div class="img" role="img" aria-label="Clean, bright family home"></div>
+      <div class="pair"><div role="img" aria-label="Freshly cleaned Calgary living room"></div><div role="img" aria-label="Spotless kitchen with island"></div></div>
       <ul class="svc">
         <li><a href="https://cleanclubcalgary.com/home-cleaning-service/">Recurring Service <span>Residential</span></a></li>
         <li><a href="https://cleanclubcalgary.com/post-construction-cleaning/">Post Construction <span>Residential</span></a></li>
